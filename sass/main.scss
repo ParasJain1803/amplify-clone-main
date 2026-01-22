@@ -1,0 +1,73 @@
+@use './abstracts/functions' as *;
+@use './abstracts/mixins' as *;
+@use './abstracts/variables' as *;
+@use './abstracts/colors' as *;
+
+@use './layout/header' as *;
+@use './layout/footer' as *;
+@use './layout/navigation' as *;
+
+@use './components/buttons' as *;
+@use './components/cards' as *;
+
+@use './base/reset';
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: 100vw;
+    background-color: transparent;
+}
+
+nav {
+    width: remCalc(263.05px);
+    height: remCalc(99.6px);
+    padding: remCalc(22.2725px) remCalc(18.8277px);
+    background-color: $pink-dark;
+    border-bottom-right-radius: remCalc(28.8288px);
+    font-family: $font-primary;
+    color: $blue-light;
+    font-size: 3.3rem;
+    font-weight: 700;
+    position: fixed;
+    top:0;
+    z-index:1000;
+}
+
+.hero {
+    @include center;
+    height: 100vh;
+    width: 100vw;
+    border: 1px solid black;
+}
+
+.hero-video__wrapper  {
+    width: remCalc(1051.810px);
+    height: remCalc(582.146px);   
+    position: relative;
+    top:0;
+    left:0;
+    border: 1px solid red;
+    border-bottom-left-radius: remCalc(67.1854px);
+    border-bottom-right-radius: remCalc(67.1854px);
+    video {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.hero--right {
+    @include center;
+    flex-direction: column;
+    border: 1px solid green;
+    align-self: flex-end;
+}
+.card {
+    margin:.1rem;
+    height: remCalc(188.77px);
+    width: remCalc(188.77px);
+    background-color: red;
+}
