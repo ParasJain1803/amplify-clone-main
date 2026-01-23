@@ -131,6 +131,10 @@ nav {
     border-bottom-right-radius: remCalc(60px);
     position: relative;
 
+    &:hover {
+        @include radiusEffect;
+    }
+
     >.arrow>svg {
         width: remCalc(40px);
         height: remCalc(40px);
@@ -150,6 +154,10 @@ nav {
     >.arrow>svg {
         color: $blue-dark;
     }
+
+    >.arrow-text {
+        color: $blue-dark;
+    }
 }
 
 .card--pink {
@@ -162,6 +170,9 @@ nav {
     >.arrow>svg {
         color: $pink-dark;
     }
+    >.arrow-text {
+        color: $pink-dark;
+    }
 }
 
 .card--green {
@@ -172,6 +183,9 @@ nav {
     }
 
     >.arrow>svg {
+        color: $green-dark;
+    }
+    >.arrow-text {
         color: $green-dark;
     }
 }
@@ -246,6 +260,95 @@ nav {
     transform: rotate(1.2deg);
 }
 
+// page 3
+
 .card-trio {
-    >&__heading {}
+    height: 100vh;
+    width: 100%;
+    gap: remCalc(5px);
+    padding: 0 remCalc(32px);
+    border-bottom-left-radius: remCalc(180px);
+    border-bottom-right-radius: remCalc(180px);
+
+    &>&__heading>h2 {
+        font-family: $font-secondary;
+        font-weight: 800;
+        font-size: remCalc(86.13px);
+        color: $pink-dark;
+        @include center;
+    }
+
+    &>&__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: remCalc(20px);
+        padding-top: remCalc(60px);
+
+        &>.card {
+            height: remCalc(400px);
+            width: remCalc(400px);
+            position: relative;
+            @include radiusEffect(90px);
+
+            &:hover {
+                transition: ease-in-out 0.3s;
+                @include radiusEffect(100px);
+            }
+
+            .card-text {
+                font-family: $font-secondary;
+                font-weight: 800;
+                font-size: remCalc(32px);
+                letter-spacing: remCalc(-0.368px);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding-left: 10px;
+
+                p {
+                    font-family: $font-secondary;
+                    font-weight: 700;
+                    font-size: remCalc(70px);
+                    line-height: 1.1;
+                    letter-spacing: remCalc(-1.2px);
+                }
+            }
+
+            >.arrow {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            >.arrow>p {
+                transform: rotate(90deg);
+                font-family: $font-secondary;
+                font-weight: 800;
+                font-size: remCalc(32px);
+                letter-spacing: remCalc(-0.368px);
+            }
+
+            >.arrow>svg {
+                width: remCalc(90px);
+                height: remCalc(90px);
+                position: absolute;
+                top: remCalc(5px);
+                right: remCalc(5px);
+            }
+        }
+    }
+
+}
+
+.arrow-text {
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: remCalc(32px);
+    letter-spacing: remCalc(-0.368px);
+    position: absolute;
+    top: remCalc(128px);
+    right: remCalc(0px);
+    transform: rotate(270deg);
 }

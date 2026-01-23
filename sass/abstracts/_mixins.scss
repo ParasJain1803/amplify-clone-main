@@ -1,5 +1,14 @@
+@use './functions' as *;
+
+
 @mixin center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin radiusEffect($pix:65px) {
+    border-bottom-left-radius: remCalc($pix);
+    border-top-left-radius: remCalc($pix);
+    border-bottom-right-radius: remCalc($pix);
 }
