@@ -18,7 +18,8 @@
         background-color: $back_color;
         color: $img_color;
         text-align: left;
-        font-size: remCalc(20px);
+        scrollbar-color: $img_color transparent;
+        scrollbar-width: thin;
     }
 
     .people__card--image {

@@ -384,10 +384,9 @@ nav {
         }
     }
 
+    // done with help :)
     // Flip Card Styles
     // 3D Cube Rotation Styles
-    --depth: 150px; // Approximate half-width of the card
-
     .people__card {
         background-color: transparent;
         perspective: 1000px;
@@ -406,12 +405,12 @@ nav {
         text-align: center;
         transition: transform 600ms cubic-bezier(.77, 0, .175, 1);
         transform-style: preserve-3d;
-        transform: translateZ(calc(var(--depth) * -1)); // Initial position
+        transform: translateZ(calc($depth * -1)); // Initial position
     }
 
     // Hover Effect
     .people__card:hover .people__card--inner {
-        transform: translateZ(calc(var(--depth) * -1)) rotateY(-90deg);
+        transform: translateZ(calc($depth * -1)) rotateY(-90deg);
     }
 
     // Front (Image)
@@ -424,7 +423,7 @@ nav {
         justify-content: center;
         align-items: center;
         background-color: #bbb;
-        transform: translateZ(var(--depth)); // Push forward
+        transform: translateZ($depth); // Push forward
     }
 
     // Back/Side (Bio)
@@ -442,28 +441,31 @@ nav {
         box-sizing: border-box;
         overflow-y: auto;
         text-align: left;
+        padding: remCalc(22px);
         
         // Rotate 90deg and push forward
-        transform: rotateY(90deg) translateZ(var(--depth));
+        transform: rotateY(90deg) translateZ($depth);
         z-index: 2;
 
         h3 {
             font-family: $font-secondary;
             font-size: remCalc(30.5387px);
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: remCalc(-0.610773px);
             line-height: remCalc(41.2272px);
             text-transform: uppercase;
+            width: 100%;
         }
 
         p {
             font-family: $font-primary;
             font-size: remCalc(18.4px);
-            font-weight: 500;
+            font-weight: 550;
             display: block;
             letter-spacing: remCalc(-0.368px);
             line-height: remCalc(27.6px);
             text-size-adjust: 100%;
+            overflow-y: auto;
         }
     }
 
