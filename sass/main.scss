@@ -13,13 +13,17 @@
 @use './base/reset';
 
 .wrapper {
-    width: 100vw;
-    height: 100vh;
+    height: fit-content;
+    background-color: #eeeeee;
 }
 
 header {
     width: 100vw;
+    height: 0;
     background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -32,9 +36,7 @@ nav {
     color: $blue-light;
     font-size: 3.3rem;
     font-weight: 700;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+
     @include center;
 }
 
@@ -46,6 +48,7 @@ nav {
     width: 100%;
     overflow: hidden;
     position: relative;
+    background-color: white;
 }
 
 .hero__heading {
@@ -170,6 +173,7 @@ nav {
     >.arrow>svg {
         color: $pink-dark;
     }
+
     >.arrow-text {
         color: $pink-dark;
     }
@@ -185,6 +189,7 @@ nav {
     >.arrow>svg {
         color: $green-dark;
     }
+
     >.arrow-text {
         color: $green-dark;
     }
@@ -208,6 +213,7 @@ nav {
     min-height: 100vh;
     width: 100%;
     padding: remCalc(93.416px) remCalc(32px);
+    background-color: white;
 
     &>&__inner {
         background-color: $pink-light;
@@ -266,9 +272,10 @@ nav {
     height: 100vh;
     width: 100%;
     gap: remCalc(5px);
-    padding: 0 remCalc(32px);
-    border-bottom-left-radius: remCalc(180px);
-    border-bottom-right-radius: remCalc(180px);
+    padding: 0 remCalc(16px);
+    border-bottom-left-radius: remCalc(130px);
+    border-bottom-right-radius: remCalc(130px);
+    background-color: white;
 
     &>&__heading>h2 {
         font-family: $font-secondary;
@@ -280,7 +287,7 @@ nav {
 
     &>&__inner {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         gap: remCalc(20px);
         padding-top: remCalc(60px);
@@ -290,10 +297,11 @@ nav {
             width: remCalc(400px);
             position: relative;
             @include radiusEffect(90px);
+            // padding: 0 remCalc(10px);
 
             &:hover {
-                transition: ease-in-out 0.3s;
-                @include radiusEffect(100px);
+                transition: ease 0.2s;
+                @include radiusEffect(130px);
             }
 
             .card-text {
@@ -349,6 +357,153 @@ nav {
     letter-spacing: remCalc(-0.368px);
     position: absolute;
     top: remCalc(128px);
-    right: remCalc(0px);
+    right: remCalc(-10px);
     transform: rotate(270deg);
+}
+
+// page 4
+
+
+.people-section {
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+
+    &>&--heading {
+        padding: remCalc(45px);
+
+        &>h2 {
+            font-family: $font-secondary;
+            font-weight: 800;
+            font-size: remCalc(51.13px);
+            color: $pink-dark;
+            @include center;
+            letter-spacing: remCalc(-2.04636px);
+            line-height: remCalc(56.275px);
+            text-wrap-mode: wrap;
+
+        }
+    }
+
+    // Flip Card Styles
+    // 3D Cube Rotation Styles
+    --depth: 150px; // Approximate half-width of the card
+
+    .people__card {
+        background-color: transparent;
+        perspective: 1000px;
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 1 / 1; 
+        z-index: 1;
+        position: relative;
+    }
+
+    // Wrapper (Rotates)
+    .people__card--inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 600ms cubic-bezier(.77, 0, .175, 1);
+        transform-style: preserve-3d;
+        transform: translateZ(calc(var(--depth) * -1)); // Initial position
+    }
+
+    // Hover Effect
+    .people__card:hover .people__card--inner {
+        transform: translateZ(calc(var(--depth) * -1)) rotateY(-90deg);
+    }
+
+    // Front (Image)
+    .people__card--front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #bbb;
+        transform: translateZ(var(--depth)); // Push forward
+    }
+
+    // Back/Side (Bio)
+    .people__card--back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        text-align: left;
+        
+        // Rotate 90deg and push forward
+        transform: rotateY(90deg) translateZ(var(--depth));
+        z-index: 2;
+
+        h3 {
+            font-family: $font-secondary;
+            font-size: remCalc(30.5387px);
+            font-weight: 700;
+            letter-spacing: remCalc(-0.610773px);
+            line-height: remCalc(41.2272px);
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: $font-primary;
+            font-size: remCalc(18.4px);
+            font-weight: 500;
+            display: block;
+            letter-spacing: remCalc(-0.368px);
+            line-height: remCalc(27.6px);
+            text-size-adjust: 100%;
+        }
+    }
+
+    >.people__container {
+        // height: 100%;
+        display: grid;
+        overflow-y: hidden;
+        grid-template-columns: repeat(4, 1fr);
+
+        >.people__card--1 {
+            @include people_card($pink-dark, #ff8eff);
+        }
+
+        >.people__card--2 {
+            @include people_card($green-dark, #00fa7f);
+        }
+
+        >.people__card--3 {
+            @include people_card($pink-hot, #fcdc4d);
+        }
+
+        >.people__card--4 {
+            @include people_card($blue-dark, #00ffe6);
+        }
+
+        >.people__card--5 {
+            @include people_card($pink_hot, #fcdc4d);
+        }
+
+        >.people__card--6 {
+            @include people_card($blue-dark, #00ffe6);
+        }
+
+        >.people__card--7 {
+            @include people_card($pink-dark, #ff8eff);
+        }
+
+        >.people__card--8 {
+            @include people_card($green-dark, #00fa7f);
+        }
+    }
+
 }

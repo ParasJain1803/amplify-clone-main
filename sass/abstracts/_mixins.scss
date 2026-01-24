@@ -7,8 +7,24 @@
     align-items: center;
 }
 
-@mixin radiusEffect($pix:65px) {
+@mixin radiusEffect($pix: 65px) {
     border-bottom-left-radius: remCalc($pix);
     border-top-left-radius: remCalc($pix);
     border-bottom-right-radius: remCalc($pix);
+}
+
+@mixin people_card($img_color, $back_color: white) {
+    .people__card--back {
+        background-color: $back_color;
+        color: $img_color;
+        text-align: left;
+        font-size: remCalc(20px);
+    }
+
+    .people__card--image {
+        background-color: $img_color;
+        object-fit: contain;
+        width: 100%;
+        display: block;
+    }
 }
