@@ -355,6 +355,7 @@ nav {
 .people-section {
   padding: 0 1rem;
   padding-bottom: 1rem;
+  background-color: white;
 }
 .people-section > .people-section--heading {
   padding: 2.8125rem;
@@ -688,4 +689,109 @@ nav {
   right: 1rem;
   z-index: 100;
   border-top-left-radius: 25px;
+}
+
+.our-work {
+  background-color: white;
+  padding-top: 10.1147625rem;
+  padding-bottom: 3.8647625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.our-work > h2 {
+  width: 100%;
+  padding: 2.8125rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 7.042125rem;
+  font-weight: 900;
+  letter-spacing: -0.281685rem;
+  color: #831672;
+  text-align: center;
+}
+.our-work > .space {
+  padding: 3.58548125rem;
+  width: 100vw;
+}
+.our-work > .feature-card {
+  background-color: #00fa7f;
+  color: #00530d;
+  width: 85%;
+  border-top-right-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+  height: 25.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+  padding: 0.5rem;
+  position: relative;
+}
+.our-work > .feature-card:hover {
+  border-top-right-radius: 3.4375rem;
+  border-bottom-left-radius: 3.4375rem;
+}
+.our-work > .feature-card > .feature-card__image {
+  width: 47%;
+  height: 100%;
+}
+.our-work > .feature-card > .feature-card__image img {
+  border-top-right-radius: 2.1875rem;
+  border-bottom-left-radius: 2.1875rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.our-work > .feature-card > .feature-card__content {
+  width: 47%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #00530d;
+}
+.our-work > .feature-card > .feature-card__content > h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 3.7710625rem;
+  font-weight: 900;
+  letter-spacing: -0.1408425rem;
+  line-height: 3.8731875rem;
+}
+.our-work > .feature-card > .feature-card__content > p {
+  width: 90%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15866875rem;
+  font-weight: 500;
+  line-height: 1.725rem;
+  letter-spacing: -0.023rem;
+}
+.our-work > .feature-card > .arrow {
+  z-index: 100;
+  border-top-left-radius: 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  bottom: 0.3em;
+  right: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.our-work > .feature-card > .arrow p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: currentColor;
+}
+.our-work > .feature-card > .arrow svg {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.our-work > .feature-card > .arrow svg path {
+  fill: currentColor;
 }/*# sourceMappingURL=main.css.map */
