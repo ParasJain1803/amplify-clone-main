@@ -558,4 +558,105 @@ nav {
      object-fit: contain;
   width: 100%;
   display: block;
+}
+
+.how-we-work {
+  background-color: #831672;
+  width: 100%;
+  padding-top: 10.1147625rem;
+  position: relative;
+}
+.how-we-work > .text-wrapper {
+  gap: 6.25rem;
+}
+.how-we-work > .text-wrapper > h2 {
+  color: #00ffe6;
+  font-size: 7.042125rem;
+  display: block;
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.281685rem;
+  line-height: 7.7481875rem;
+  width: 100%;
+  padding-left: 2rem;
+}
+.how-we-work > .text-wrapper > .content {
+  width: 100%;
+  padding: 2rem;
+}
+.how-we-work > .text-wrapper > .content > p {
+  width: 85%;
+  color: #ffc7ff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.90866875rem;
+  font-weight: 500;
+  letter-spacing: -0.0381733125rem;
+  line-height: 2.5767rem;
+}
+.how-we-work > .text-wrapper > .content > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+  padding: 1rem 2rem;
+  background-color: #ffc7ff;
+  color: #831672;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+.how-we-work > .text-wrapper > .content > a p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.how-we-work > .text-wrapper > .content > a svg {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.how-we-work > .text-wrapper > .content > a svg path {
+  fill: currentColor;
+}
+
+.rounded-boxes {
+  background-color: inherit;
+}
+
+.rounded-box {
+  background-color: #831672;
+  border: 2px solid #00ffe6;
+  border-bottom: 0;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  position: relative;
+  padding: 2rem;
+  height: 15.625rem;
+}
+.rounded-box > h3 {
+  position: absolute;
+  top: 70;
+  left: 70;
+  color: #00ffe6;
+  font-size: 4.125rem;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.166075rem;
+}
+.rounded-box > p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  display: block;
+  width: 55%;
+  position: absolute;
+  bottom: 30px;
+  right: 80px;
+  color: #ffc7ff;
 }/*# sourceMappingURL=main.css.map */
