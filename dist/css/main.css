@@ -40,13 +40,12 @@ nav {
   padding: 1.39203125rem 1.17673125rem;
   background-color: #831672;
   border-bottom-right-radius: 3.58548125rem;
-  font-family: "Roboto", sans-serif;
-  color: #00ffe6;
-  font-size: 3.3rem;
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+nav > img {
+  width: 83%;
 }
 
 .hero {

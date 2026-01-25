@@ -41,10 +41,10 @@ nav {
     padding: remCalc(22.2725px) remCalc(18.8277px);
     background-color: $pink-dark;
     border-bottom-right-radius: remCalc(57.3677px);
-    font-family: $font-primary;
-    color: $blue-light;
-    font-size: 3.3rem;
-    font-weight: 700;
+   
+    > img {
+        width: 83%;
+    }
 
     @include center;
 }
