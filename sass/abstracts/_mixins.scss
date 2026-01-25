@@ -29,3 +29,9 @@
         display: block;
     }
 }
+
+@mixin respond($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
