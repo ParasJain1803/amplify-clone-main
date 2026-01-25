@@ -12,13 +12,7 @@
 
 @use './base/reset';
 
-$breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1280px,
-  xxl: 1440px
-);
+
 
 
 .wrapper {
@@ -47,6 +41,12 @@ nav {
     }
 
     @include center;
+
+    @include respond(sm) {
+        width: remCalc(200px);
+        height: remCalc(100px);
+        padding: remCalc(15px);
+    }
 }
 
 .hero {
@@ -58,6 +58,12 @@ nav {
     overflow: hidden;
     position: relative;
     background-color: white;
+
+    @include respond(md) {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
 }
 
 .hero__heading {
@@ -89,6 +95,15 @@ nav {
     &--3 {
         font-size: clamp(3.8rem, 7vw, 6.2rem);
     }
+
+    @include respond(sm) {
+        margin: 0 0 2rem 2rem;
+        width: 80%;
+
+        &--1 { font-size: 2.5rem; }
+        &--2 { font-size: 3.5rem; }
+        &--3 { font-size: 3.2rem; }
+    }
 }
 
 
@@ -106,6 +121,12 @@ nav {
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+
+    @include respond(md) {
+        height: 50vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }
 
@@ -132,6 +153,15 @@ nav {
     justify-content: space-between;
     height: 100%;
     gap: remCalc(5px);
+
+    @include respond(md) {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .card {
@@ -234,9 +264,21 @@ nav {
         align-items: flex-start;
         justify-content: center;
         gap: remCalc(45px);
-        border-bottom-left-radius: remCalc(81.8362px);
         border-bottom-right-radius: remCalc(81.8362px);
         border-top-right-radius: remCalc(81.8362px);
+
+        @include respond(md) {
+            padding: remCalc(40px);
+            border-bottom-left-radius: remCalc(40px);
+            border-bottom-right-radius: remCalc(40px);
+            border-top-right-radius: remCalc(40px);
+            gap: remCalc(25px);
+        }
+
+        @include respond(sm) {
+            padding: remCalc(20px);
+            gap: remCalc(20px);
+        }
 
 
         &>h2 {
@@ -254,6 +296,10 @@ nav {
             font-size: remCalc(44.8px);
             line-height: 1.1;
             letter-spacing: remCalc(-1.2px);
+
+            @include respond(sm) {
+                font-size: remCalc(28px);
+            }
         }
     }
 }
@@ -297,9 +343,13 @@ nav {
     &>&__inner {
         display: flex;
         justify-content: space-around;
-        align-items: center;
         gap: remCalc(20px);
         padding-top: remCalc(60px);
+
+        @include respond(md) {
+            flex-direction: column;
+            padding-bottom: 2rem;
+        }
 
         &>.card {
             height: remCalc(400px);
@@ -307,6 +357,11 @@ nav {
             position: relative;
             @include radiusEffect(90px);
             // padding: 0 remCalc(10px);
+
+            @include respond(md) {
+                width: 100%;
+                max-width: remCalc(400px);
+            }
 
             &:hover {
                 transition: ease 0.2s;
@@ -484,6 +539,18 @@ nav {
         overflow-y: hidden;
         grid-template-columns: repeat(4, 1fr);
 
+        @include respond(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include respond(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond(sm) {
+            grid-template-columns: 1fr;
+        }
+
         >.people__card--1 {
             @include people_card($pink-dark, #ff8eff);
         }
@@ -543,6 +610,13 @@ nav {
             line-height: remCalc(123.971px);
             width: 100%;
             padding-left: 2rem;
+
+            @include respond(md) {
+                font-size: remCalc(60px);
+                line-height: 1.1;
+                letter-spacing: remCalc(-2px);
+                padding-left: 1rem;
+            }
         }
     
         >.content {
@@ -631,6 +705,12 @@ nav {
         bottom: 30px;
         right: 80px;
         color: $pink-text;
+
+        @include respond(sm) {
+            width: 80%;
+            font-size: remCalc(22px);
+            right: 20px;
+        }
     }
 }
 
@@ -735,6 +815,33 @@ nav {
                 letter-spacing: remCalc(-0.368px);
             }    
         }   
+    
+        @include respond(md) {
+            flex-direction: column;
+            height: auto;
+            width: 95%;
+            padding: 2rem;
+
+            >.feature-card__image {
+                width: 100%;
+                height: remCalc(250px);
+                
+                img {
+                    border-radius: remCalc(35px);
+                }
+            }
+
+            >.feature-card__content {
+                width: 100%;
+                height: auto;
+                gap: 1rem;
+
+                >h3 {
+                    font-size: remCalc(40px);
+                    line-height: 1.1;
+                }
+            }
+        }
         >.arrow {
             z-index: 100;
             border-top-left-radius: 25px;
@@ -913,6 +1020,10 @@ footer {
         gap: remCalc(40px);
         color: $pink-text;
 
+        @include respond(md) {
+            flex-direction: column;
+        }
+
         .left {
             display: flex;
             flex-direction: column;
@@ -965,6 +1076,12 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding-top: 2rem;
+
+        @include respond(md) {
+            flex-direction: column-reverse;
+            gap: 1rem;
+            align-items: flex-start;
+        }
         color: $pink-text;
         opacity: 0.8    ;
 
@@ -977,6 +1094,11 @@ footer {
         .links {
             display: flex;
             gap: remCalc(50px);
+
+            @include respond(sm) {
+                flex-direction: column;
+                gap: remCalc(10px);
+            }
 
             a {
                 font-family: $font-primary;
