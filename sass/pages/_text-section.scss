@@ -1,0 +1,57 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/colors' as *;
+
+.text-section {
+    min-height: 100vh;
+    width: 100%;
+    padding: remCalc(93px) remCalc(32px);
+    background-color: white;
+
+    &>&__inner {
+        background-color: $pink-light;
+        height: 100%;
+        width: 100%;
+        padding: remCalc(81px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: remCalc(45px);
+        border-bottom-right-radius: remCalc(81px);
+        border-top-right-radius: remCalc(81px);
+
+        &>h2 {
+            color: $pink-dark;
+            font-family: $font-secondary;
+            font-weight: 800;
+            font-size: remCalc(18.4px);
+            text-transform: uppercase;
+        }
+
+        &>p {
+            color: $font-black;
+            font-family: $font-primary;
+            font-weight: 50;
+            font-size: remCalc(44.8px);
+            line-height: 1.1;
+            letter-spacing: remCalc(-1.2px);
+        }
+    }
+}
+
+.highlighter {
+    background-color: $pink-dark;
+    color: $blue-light;
+    padding: 0 4px;
+    font-weight: 550;
+    display: inline-block;
+}
+
+.highlighter--up {
+    transform: rotate(-1.2deg);
+}
+
+.highlighter--down {
+    transform: rotate(1.2deg);
+}

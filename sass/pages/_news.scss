@@ -1,0 +1,118 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+.news-section {
+    background-color: white;
+    >h2 {
+    width: 100%;
+    padding: remCalc(45px);
+    font-family: $font-secondary;
+    font-size: remCalc(92px);
+    font-weight: 900;
+    letter-spacing: remCalc(-4px);
+    color: $pink-dark;
+    text-align: center;
+    }
+}
+
+.carousel {
+    margin: 10px auto 0;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    >.group {
+        @include center;
+        gap: 2rem;
+        animation: spin 20s infinite linear;
+        padding-right: 2rem;
+    }    
+}
+
+.news-card {
+    flex: 0 0 5em;
+    height: remCalc(328px);
+    min-width: remCalc(480px);
+    border-top-left-radius: remCalc(45px);
+    border-bottom-right-radius: remCalc(45px);
+    padding : 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &:hover {
+        border-top-left-radius: remCalc(65px);
+    border-bottom-right-radius: remCalc(65px);
+    }
+
+    >.heading {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        >:first-child {
+            font-family: $font-primary;
+            font-size: remCalc(21px);
+            font-weight: 800;
+            line-height: remCalc(27.6px);
+            letter-spacing: remCalc(-0px);
+        }
+        >p:nth-child(2) {
+            font-family: $font-secondary;
+            font-size: remCalc(21px);
+            font-weight: 900;
+            opacity: 0.7;
+            line-height: remCalc(27.6px);
+            letter-spacing: remCalc(-0px);
+        }
+    }
+
+    >.content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        >:first-child {
+            font-family: $font-secondary;
+            font-size: remCalc(24px);
+            font-weight: 900;
+            opacity: 0.7;
+            line-height: remCalc(27.6px);
+            letter-spacing: remCalc(-0px);
+        }
+        >p:nth-child(2) {
+            font-family: $font-primary;
+            font-size: remCalc(36px);
+            font-weight: 900;
+            line-height: remCalc(37.6px);
+            letter-spacing: remCalc(-0px);
+        }
+    }
+}
+
+.news-card--pink {
+    background-color: $pink-light;
+    color: $pink-dark;
+}
+.news-card--blue {
+    background-color: $blue-light;
+    color: $blue-dark;
+}
+.news-card--green {
+    background-color: $green-light;
+    color: $green-dark;
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+    to {
+        translate: -100%
+    }
+}

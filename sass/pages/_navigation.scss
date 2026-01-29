@@ -1,0 +1,18 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
+
+nav {
+    width: remCalc(280px);
+    height: remCalc(136.7px);
+    padding: remCalc(22px) remCalc(18px);
+    background-color: $pink-dark;
+    border-bottom-right-radius: remCalc(57px);
+   
+    > img {
+        width: 83%;
+    }
+
+    @include center;
+}

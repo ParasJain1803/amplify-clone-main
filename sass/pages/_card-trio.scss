@@ -1,0 +1,105 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+@use '../components/animation' as *;
+
+
+
+
+.card-trio {
+    // min-height: 100vh;
+    width: 100%;
+    gap: remCalc(5px);
+    padding: 0 remCalc(15px);
+    padding-bottom: remCalc(20px);
+    border-bottom-left-radius: remCalc(90px);
+    border-bottom-right-radius: remCalc(90px);
+    background-color: white;
+
+    &>&__heading>h2 {
+        font-family: $font-secondary;
+        font-weight: 800;
+        font-size: remCalc(86px);
+        color: $pink-dark;
+        @include center;
+    }
+
+    &>&__inner {
+        display: flex;
+        justify-content: space-around;
+        gap: remCalc(15px);
+        padding-top: remCalc(60px);
+
+        &>.card {
+            height: remCalc(400px);
+            width: remCalc(400px);
+            position: relative;
+            @include radiusEffect(90px);
+
+            &:hover {
+                transition: all 0.3s ease;
+                @include radiusEffect(130px);
+                .arrow > svg {
+                    animation: arrow_anime 0.7s ease-out;
+                }
+            }
+
+            .card-text {
+                font-family: $font-secondary;
+                font-weight: 800;
+                font-size: remCalc(32px);
+                letter-spacing: remCalc(-0px);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding-left: 10px;
+
+                p {
+                    font-family: $font-secondary;
+                    font-weight: 700;
+                    font-size: remCalc(70px);
+                    line-height: 1.1;
+                    letter-spacing: remCalc(-1.2px);
+                }
+            }
+
+            >.arrow {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width:90px;
+                height: 90px;
+                z-index: 10; // Ensure it's above the card text
+            }
+
+            >.arrow>p {
+                transform: rotate(90deg);
+                font-family: $font-secondary;
+                font-weight: 800;
+                font-size: remCalc(32px);
+                letter-spacing: remCalc(-0px);
+            }
+
+            >.arrow > svg {
+                width: remCalc(90px);
+                height: remCalc(90px);
+                position: absolute;
+                top: remCalc(5px);
+                right: remCalc(5px);
+            }
+        }
+    }
+}
+
+.arrow-text {
+    font-family: $font-secondary;
+    font-weight: 800;
+    font-size: remCalc(32px);
+    letter-spacing: remCalc(-0px);
+    position: absolute;
+    top: remCalc(128px);
+    right: remCalc(-10px);
+    transform: rotate(270deg);
+}

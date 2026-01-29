@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="/dist/css/main.css" />
+    <link rel="stylesheet" href="dist/css/main.css" />
   </head>
   <body>
     <main class="wrapper">
@@ -21,7 +21,6 @@
       <header>
         <nav>
           <img src="./media/img/header.png" alt="header-logo">
-          <!-- <p>AMPLIFY</p> -->
         </nav>
       </header>
       <section class="hero">
@@ -33,7 +32,18 @@
               <span class="hero__heading--3">Still can</span>
             </div>
             <video autoplay muted loop src="./media/video/hero-video.mp4"></video>
-            <div class="hamburger">
+            <ul class="menu" id="menu">
+              <li><a href="#" class="menu__item">Home</a></li>
+              <li><a href="#" class="menu__item">Profile</a></li>
+              <li><a href="#" class="menu__item">About</a></li>
+              <li><a href="#" class="menu__item">Contacts</a></li>
+              <a class="close" href="#">
+                <span class="material-icons">
+                  X
+                </span>
+              </a>
+            </ul>
+            <a href="#menu" class="hamburger">
               <svg
                 width="40px"
                 height="54px"
@@ -69,7 +79,8 @@
                   ></path>
                 </g>
               </svg>
-            </div>
+            </a> 
+            
           </div>
         </div>
         <div class="hero--right">
@@ -87,7 +98,7 @@
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                    d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
                     fill="currentColor"
                   ></path>
                 </g>
@@ -113,7 +124,7 @@
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                    d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
                     fill="currentColor"
                   ></path>
                 </g>
@@ -138,7 +149,7 @@
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                    d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
                     fill="currentColor"
                   ></path>
                 </g>
@@ -178,7 +189,7 @@
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
-                      d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
                       fill="currentColor"
                     ></path>
                   </g>
@@ -203,7 +214,7 @@
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
-                      d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
                       fill="currentColor"
                     ></path>
                   </g>
@@ -228,7 +239,7 @@
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
-                      d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
                       fill="currentColor"
                     ></path>
                   </g>
@@ -344,38 +355,77 @@
             How we work
           </h2>
           <div class="content">
-            <p>The promise to Australians has been broken. AMPLIFY's work elevates the community's voice, building political courage to act and rebuild that promise - while we still can.</p>
+            <p class="content__text">The promise to Australians has been broken. AMPLIFY's work elevates the community's voice, building political courage to act and rebuild that promise - while we still can.</p>
             <a href="#">
-              <p>Explore</p>
-              <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)matrix(1, 0, 0, -1, 0, 0)">
+              <p class="explore-btn">Explore</p>
+              <svg width="74px" height="74px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)matrix(1, 0, 0, -1, 0, 0)">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier"> 
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z" fill="#831672"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z" fill="#831672"></path>
                 </g>
               </svg>
             </a>
           </div>
           <div class="rounded-boxes">
             <div class="rounded-box">
-              <h3>Seek <i class="fa fa-search"></i></h3>
+              <h3>Seek
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M11.576 5.79a5.438 5.438 0 1 1 0 10.876 5.438 5.438 0 0 1 0-10.876Z"
+      />
+      <path
+        fill="currentColor"
+        fill-rule="evenodd"
+        d="M12 0c6.627 0 12 5.373 12 12v12H12C5.373 24 0 18.627 0 12S5.373 0 12 0Zm-.424 4.106a7.122 7.122 0 0 0-7.122 7.122l.002.184a7.122 7.122 0 0 0 6.936 6.936l.184.002a7.09 7.09 0 0 0 4.405-1.526l4.817 4.817 1.191-1.19-4.817-4.818a7.088 7.088 0 0 0 1.524-4.221l.002-.184a7.122 7.122 0 0 0-6.938-7.12l-.184-.002Z"
+        clip-rule="evenodd"
+      />
+                </svg>
+              </h3>
               <p>We seek out the best evidence-based reforms from leading experts around the world to the issues that are most important to the Australian community.</p>
             </div>
             <div class="rounded-box">
-              <h3>Solve <i class="fa fa-lightbulb-o"></i></h3>
+              <h3>Solve
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path
+        fill="currentColor"
+        d="M12 7.138a4.065 4.065 0 0 1 2.791 7.02c-.476.45-.948 1.076-1.12 1.863H10.33c-.171-.787-.643-1.413-1.12-1.864A4.065 4.065 0 0 1 12 7.138Z"
+      />
+      <path
+        fill="currentColor"
+        fill-rule="evenodd"
+        d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0ZM9.728 19.76l.105.877h4.335l.105-.877H9.728Zm-.149-1.806.104.877h4.634l.105-.877H9.579ZM12 6.133a5.07 5.07 0 0 0-5.07 5.07l.002.135a5.055 5.055 0 0 0 1.587 3.55c.44.416.794.94.862 1.542l.066.596h5.107l.066-.596c.063-.565.378-1.06.78-1.463l.082-.08a5.055 5.055 0 0 0 1.586-3.549l.002-.135c0-2.8-2.27-5.07-5.07-5.07Zm-8.808 4.666v.842h2.434v-.842H3.192Zm15.185 0v.842h2.434v-.842h-2.434ZM3.666 8.317l2.257.91.315-.781-2.258-.91-.314.781Zm14.071.09.321.778 2.25-.926-.32-.78-2.25.928ZM5.477 5.294l1.72 1.721.595-.596-1.72-1.72-.596.595Zm10.732 1.122.596.596 1.72-1.722-.057-.058.004-.004-.475-.474-.004.004-.063-.063-1.72 1.72ZM8.1 3.306l.973 2.231.772-.336-.972-2.231-.772.336Zm6.044 1.892.773.332.962-2.235-.774-.333-.961 2.236Zm-2.565-2.786v2.433h.842V2.412h-.842Z"
+        clip-rule="evenodd"
+      />
+              </svg>
+              </h3>
               <p>We empower the community to find solutions, using cutting edge tools to debate, deliberate and build consensus.</p>
             </div>
             <div class="rounded-box">
-              <h3>Spark <i class="fa fa-gear"></i></h3>
+              <h3>Spark 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path
+        fill="currentColor"
+        d="m13.448 8.503 2.05 2.049v2.896l-2.05 2.05H10.55l-2.049-2.05V10.55l2.048-2.047h2.898Z"
+      />
+      <path
+        fill="currentColor"
+        fill-rule="evenodd"
+        d="M24 7.03v9.94L16.97 24H7.03L0 16.97V7.03L7.03 0h9.94L24 7.03ZM10.54 3.242v5.231l-3.7-3.7-2.063 2.063 3.702 3.703H3.242v2.916h5.236L4.775 17.16l2.062 2.062 3.703-3.702v5.237h2.916v-5.24l3.706 3.705 2.063-2.063-3.703-3.703h5.235V10.54H15.52l3.702-3.702-2.063-2.063-3.703 3.703V3.243H10.54Z"
+        clip-rule="evenodd"
+      />
+          </svg>
+              </h3>
               <p>We spark the change the community wants to see by advocating to those with the power to make change happen.  </p>
             </div>
           </div>
         </div>
       </section>
-
+      
       <!-- page 6 -->
       <section class="pic-section">
-        <img src="./media//img//background.jpg" alt="background">
+        <img src="https://cdn.prod.website-files.com/68b89f4012e125bcdfe2c948/68fade1c285768dce334e863_amp.png" alt="background">
         <figcaption>Australia's first National AMPLIFICATION on Housing, February 2025</figcaption>
       </section>
 
@@ -385,7 +435,7 @@
         <div class="space"></div>
         <div class="feature-card">
           <div class="feature-card__image">
-            <img src="https://cdn.prod.website-files.com/68b89f4012e125bcdfe2c948/68f9a4dd56b45494290bc43b_AMPLIFY-TOOOWOOMBA-STILLS.00_02_33_13.Still011-p-2000.webp" alt="photo">
+            <img class="feature-card__image--img" src="./media/img/insight-card.webp" alt="photo">
           </div>
           <div class="feature-card__content">
             <h3>Our insights</h3>
@@ -405,7 +455,7 @@
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
-                      d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z"
+                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
                       fill="currentColor"
                     ></path>
                   </g>
@@ -516,7 +566,6 @@
             </div>
           </div>
         </div>
-        <img src="./media/img/footer.png" alt="footer">
       </footer>
     </main>
   </body>

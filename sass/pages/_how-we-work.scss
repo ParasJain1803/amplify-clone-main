@@ -1,0 +1,121 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/colors' as *;
+
+.how-we-work{
+    background-color: $pink-dark;
+    width: 100%;
+    padding-top: remCalc(161.8362px);
+    position: relative;
+
+    >.text-wrapper {
+        gap: remCalc(100px);
+        >h2 {
+            color:$blue-light;
+            font-size: remCalc(112.674px);
+            display: block;
+            position: relative;
+            font-family: $font-secondary;
+            font-weight: 800;
+            letter-spacing: remCalc(-4.50696px);
+            line-height: remCalc(123.971px);
+            width: 100%;
+            padding-left: 2rem;
+        }
+    
+        >.content {
+            width: 100%;
+            padding: 2rem;
+            >p {
+                width: 85%;
+                color: $pink-text;
+                font-family: $font-primary;
+                font-size: remCalc(30.5387px);
+                font-weight: 500;
+                letter-spacing: remCalc(-0.610773px);
+                line-height: remCalc(41.2272px);
+            }
+            >a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 120px;
+                padding: remCalc(6px) remCalc(12px);
+                
+                background-color: $pink-text; 
+                color: $pink-dark; 
+                border: 1px solid transparent;
+                
+                cursor: pointer;
+                text-decoration: none;
+                transition: transform .2s, border-color .2s, color .2s, background-color .2s;
+
+                p {
+                    font-family: $font-secondary;
+                    font-size: remCalc(20px); 
+                    font-weight: 700;
+                    margin: 0;
+                    line-height: 1.2;
+                    letter-spacing: -0.02em;
+                }
+
+                svg {
+                    width: remCalc(50px);
+                    height: remCalc(50px);
+                    
+                    path {
+                        fill: currentColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rounded-boxes {
+    background-color: inherit;
+}
+.rounded-box {
+    background-color: $pink-dark;
+    border-bottom: 0;
+    position: relative;
+    padding: 2rem;
+    height: remCalc(250px);
+    border: 2px solid $blue-light;
+    border-bottom: 0;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    
+    >h3 {
+        position: absolute;
+        top:70;
+        left:70;
+        color: $blue-light;
+        font-size: remCalc(66px);
+        font-weight: 900;
+        font-family: $font-primary;
+        letter-spacing: remCalc(-2.6572px);
+        >svg {
+            width: remCalc(50px);
+            height: remCalc(50px);
+            
+            path {
+                fill: $blue-light;
+            }
+        }
+    }
+
+    >p {
+        font-family: $font-primary;
+        font-size: remCalc(30px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        display: block;
+        width: 55%;
+        position: absolute;
+        bottom: 30px;
+        right: 80px;
+        color: $pink-text;
+    }
+}

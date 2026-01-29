@@ -1,0 +1,115 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+.our-work {
+    background-color: white;
+    padding-top: remCalc(161px);
+    padding-bottom: remCalc(61px);
+    @include center;
+    flex-direction: column;
+    >h2 {
+    width: 100%;
+    padding: remCalc(45px);
+    font-family: $font-secondary;
+    font-size: remCalc(112px);
+    font-weight: 900;
+    letter-spacing: remCalc(-4px);
+    color: $pink-dark;
+    text-align: center;
+    }
+    >.space {
+        padding: remCalc(57px);
+        width: 100vw;
+    }
+    >.feature-card {
+        background-color: $green-light;
+        color: $green-dark;
+        width: 85%;
+        border-top-right-radius: remCalc(40px);
+        border-bottom-left-radius: remCalc(40px);
+        height: remCalc(401px);
+        @include center;
+        gap:6%;
+        padding: .5rem;
+        position: relative;
+
+        &:hover {
+            border-top-right-radius: remCalc(55px);
+            border-bottom-left-radius: remCalc(55px);
+            .feature-card__image--img {
+                border-bottom-left-radius: remCalc(55px);
+            }
+        }
+
+        >.feature-card__image {
+            width: 47%;
+            height: 100%;
+            overflow: hidden;
+            img {
+                border-top-right-radius: remCalc(35px);
+                border-bottom-left-radius: remCalc(35px);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        >.feature-card__content {
+            width: 47%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            color: $green-dark;
+            >h3 {
+                font-family: $font-secondary;
+                font-size: remCalc(60px);
+                font-weight: 900;
+                letter-spacing: remCalc(-2px);
+                line-height: remCalc(61px);
+            }  
+            >p {
+                width: 90%;
+                font-family: $font-primary;
+                font-size: remCalc(18px);
+                font-weight: 500;
+                line-height: remCalc(27.6px);
+                letter-spacing: remCalc(-0px);
+            }    
+        }   
+    
+        >.arrow {
+            z-index: 100;
+            border-top-left-radius: 25px;
+            width: fit-content;
+            
+            position: absolute;
+            bottom: .3em;
+            right: .3rem;
+
+            display: flex;
+            align-items: center; 
+            gap: remCalc(10px);
+
+            p {
+                font-family: $font-secondary;
+                font-size: remCalc(24px); 
+                font-weight: 700;
+                margin: 0;
+                line-height: 1;
+                letter-spacing: -0em;
+                color: currentColor;
+            }
+
+            svg {
+                width: remCalc(60px);
+                height: remCalc(60px);
+                
+                path {
+                    fill: currentColor;
+                }
+            }
+        }
+    }
+}
