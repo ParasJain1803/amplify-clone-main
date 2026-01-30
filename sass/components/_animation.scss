@@ -1,10 +1,23 @@
+
 @keyframes arrow_anime{
     0%{
-        top: 50%;
-        right: 50%;
+        top: 0;
+        right: 0;
+        opacity: 1;
+    }
+    49%{
+        top: -25%;
+        right: -25%;
+        opacity: 0;
+    }
+    50%{
+        top: 25%;
+        right: 25%;
+        opacity: 0;
     }
     100%{
         top: 0;
         right: 0;
+        opacity: 1;
     }
 }

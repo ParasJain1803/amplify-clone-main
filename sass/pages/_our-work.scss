@@ -19,10 +19,7 @@
     color: $pink-dark;
     text-align: center;
     }
-    >.space {
-        padding: remCalc(57px);
-        width: 100vw;
-    }
+    
     >.feature-card {
         background-color: $green-light;
         color: $green-dark;
@@ -40,6 +37,9 @@
             border-bottom-left-radius: remCalc(55px);
             .feature-card__image--img {
                 border-bottom-left-radius: remCalc(55px);
+            }
+            .down-arrow{
+                animation: arrow_anime_down 0.7s ease-out;
             }
         }
 

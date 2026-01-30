@@ -41,7 +41,8 @@
                 transition: all 0.3s ease;
                 @include radiusEffect(130px);
                 .arrow > svg {
-                    animation: arrow_anime 0.7s ease-out;
+                    animation: arrow_anime 0.7s ease forwards;
+
                 }
             }
 

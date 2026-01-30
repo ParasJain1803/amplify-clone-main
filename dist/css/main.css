@@ -21,7 +21,7 @@ a {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   height: 0;
   background-color: transparent;
   position: sticky;
@@ -46,9 +46,7 @@ nav > img {
 footer {
   background-color: white;
   padding-top: 3.5rem;
-}
-footer > img {
-  width: 100vw;
+  position: relative;
 }
 
 .footer-wrapper {
@@ -132,14 +130,69 @@ footer > img {
   color: #00ffe6;
 }
 
+.footer-bottom {
+  position: relative;
+  width: 100%;
+  background-color: #831672;
+  padding-bottom: 100px;
+}
+.footer-bottom__heading {
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-size: 18rem;
+  color: #00ffe6;
+  background-color: #831672;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  letter-spacing: -0.02em;
+}
+
+.footer-yellow {
+  width: 100%;
+  height: 100px;
+  background-color: #fcdc4d;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-yellow__text {
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff0580;
+}
+
 @keyframes arrow_anime {
   0% {
-    top: 50%;
-    right: 50%;
+    top: 0;
+    right: 0;
+    opacity: 1;
+  }
+  49% {
+    top: -25%;
+    right: -25%;
+    opacity: 0;
+  }
+  50% {
+    top: 25%;
+    right: 25%;
+    opacity: 0;
   }
   100% {
     top: 0;
     right: 0;
+    opacity: 1;
   }
 }
 .hero {
@@ -223,20 +276,20 @@ footer > img {
 
 .menu {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  width: 85%;
+  width: 100%;
   height: 100vh;
   list-style: none;
-  background: inherit;
+  background-color: rgba(131, 22, 114, 0.98);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
   transform: translateY(-100%);
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
 }
 .menu:target {
   transform: translateY(0);
@@ -244,27 +297,41 @@ footer > img {
 .menu__item {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 800;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 0 0 3rem 3rem;
-  width: 90%;
-  background-color: #831672;
   color: #ff8eff;
-  font-size: 2.5rem;
+  font-size: 3.75rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.menu__item:hover {
+  color: #ffffff;
+  transform: scale(1.1);
 }
 
 .close {
   position: absolute;
-  border: none;
-  color: white;
-  cursor: pointer;
-  top: 1rem;
-  right: 1rem;
+  top: 2rem;
+  right: 2rem;
   font-size: 2.5rem;
-  background-color: #831672;
   color: #ffffff;
-  padding: 10px;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.close:hover {
+  background-color: #ff8eff;
+  color: #831672;
+  transform: rotate(90deg);
 }
 
 .hero--right {
@@ -285,6 +352,7 @@ footer > img {
   border-top-left-radius: 3.75rem;
   border-bottom-right-radius: 3.75rem;
   position: relative;
+  cursor: pointer;
 }
 .card:hover {
   border-bottom-left-radius: 4.0625rem;
@@ -292,7 +360,7 @@ footer > img {
   border-bottom-right-radius: 4.0625rem;
 }
 .card:hover .arrow > svg {
-  animation: arrow_anime 0.7s ease-out;
+  animation: arrow_anime 0.7s ease forwards;
 }
 .card > .arrow {
   position: absolute;
@@ -452,7 +520,7 @@ footer > img {
   border-bottom-right-radius: 8.125rem;
 }
 .card-trio > .card-trio__inner > .card:hover .arrow > svg {
-  animation: arrow_anime 0.7s ease-out;
+  animation: arrow_anime 0.7s ease forwards;
 }
 .card-trio > .card-trio__inner > .card .card-text {
   font-family: "Roboto Condensed", sans-serif;
@@ -758,8 +826,6 @@ footer > img {
   color: #831672;
   border: 1px solid transparent;
   cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.2s, border-color 0.2s, color 0.2s, background-color 0.2s;
 }
 .how-we-work > .text-wrapper > .content > a p {
   font-family: "Roboto Condensed", sans-serif;
@@ -871,10 +937,6 @@ footer > img {
   color: #831672;
   text-align: center;
 }
-.our-work > .space {
-  padding: 3.5625rem;
-  width: 100vw;
-}
 .our-work > .feature-card {
   background-color: #00fa7f;
   color: #00530d;
@@ -895,6 +957,9 @@ footer > img {
 }
 .our-work > .feature-card:hover .feature-card__image--img {
   border-bottom-left-radius: 3.4375rem;
+}
+.our-work > .feature-card:hover .down-arrow {
+  animation: arrow_anime_down 0.7s ease-out;
 }
 .our-work > .feature-card > .feature-card__image {
   width: 47%;
