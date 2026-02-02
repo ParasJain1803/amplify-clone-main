@@ -4,53 +4,495 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AMPLIFY Australia | We Need To Act — While We Still Can</title>
-    <link rel="icon" type="image/x-icon" href="./media/img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./media/img/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <link rel="stylesheet" href="dist/css/main.css" />
   </head>
   <body>
     <main class="wrapper">
       <div class="sticky-wrapper">
-      <header>
-        <nav>
-          <img src="./media/img/header.png" alt="header-logo">
-        </nav>
-      </header>
-      <section class="hero">
-        <div class="hero--left">
-          <div class="hero-video__wrapper">
-            <div class="hero__heading">
-              <span class="hero__heading--1">We need to act</span>
-              <span class="hero__heading--2">while we</span>
-              <span class="hero__heading--3">Still can</span>
-            </div>
-            <video autoplay muted loop src="./media/video/hero-video.mp4"></video>
-            <ul class="menu" id="menu">
-              <li><a href="#" class="menu__item">Home</a></li>
-              <li><a href="#" class="menu__item">Profile</a></li>
-              <li><a href="#" class="menu__item">About</a></li>
-              <li><a href="#" class="menu__item">Contacts</a></li>
-              <a class="close" href="#">
-                <span>
-                  X
-                </span>
+        <!-- logo nav -->
+        <header>
+          <nav>
+            <img src="./media/img/header.png" alt="header-logo" />
+          </nav>
+        </header>
+
+        <!-- page 1 -->
+        <section class="hero">
+          <div class="hero--left">
+            <div class="hero-video__wrapper">
+              <div class="hero__heading">
+                <span class="hero__heading--1">We need to act</span>
+                <span class="hero__heading--2">while we</span>
+                <span class="hero__heading--3">Still can</span>
+              </div>
+              <video
+                autoplay
+                muted
+                loop
+                src="./media/video/hero-video.mp4"
+              ></video>
+
+              <!-- reference from https://dev.to/ljcdev/hamburger-css-no-js-2dfa -->
+              <ul class="menu" id="menu">
+                <li><a href="#" class="menu__item">Home</a></li>
+                <li><a href="#" class="menu__item">Profile</a></li>
+                <li><a href="#" class="menu__item">About</a></li>
+                <li><a href="#" class="menu__item">Contacts</a></li>
+                <a class="close" href="#">
+                  <span> X </span>
+                </a>
+              </ul>
+              <a href="#menu" class="hamburger">
+                <svg
+                  width="40px"
+                  height="54px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#ffe3ff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M20 7L4 7"
+                      stroke="#ffe3ff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    ></path>
+                    <path
+                      d="M20 12L4 12"
+                      stroke="#ffe3ff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    ></path>
+                    <path
+                      d="M20 17L4 17"
+                      stroke="#ffe3ff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    ></path>
+                  </g>
+                </svg>
               </a>
-            </ul>
-            <a href="#menu" class="hamburger">
+            </div>
+          </div>
+          <div class="hero--right">
+            <div class="card card--blue">
+              <div class="arrow">
+                <svg
+                  width="81px"
+                  height="81px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  transform="rotate(45)"
+                >
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
+                      fill="currentColor"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="card-text">
+                <p>AMPLIFY</p>
+                <p>Home</p>
+                <p>Truths</p>
+              </div>
+            </div>
+            <div class="card card--pink">
+              <div class="arrow">
+                <svg
+                  width="81px"
+                  height="81px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  transform="rotate(45)"
+                >
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
+                      fill="currentColor"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="card-text">
+                <p>AMPLIFY's</p>
+                <p>Work</p>
+              </div>
+            </div>
+            <div class="card card--green">
+              <div class="arrow">
+                <svg
+                  width="81px"
+                  height="81px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  transform="rotate(45)"
+                >
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
+                      fill="currentColor"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="card-text">
+                <p>AMPLIFY</p>
+                <p>Newsroom</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- page 2 -->
+        <section class="text-section">
+          <div class="text-section__inner">
+            <h2>
+              71% of Australians agree that the Australian promise has been
+              broken.
+            </h2>
+            <p>
+              For decades Australians have enjoyed a
+              <span class="highlighter highlighter--up">rising</span> standard
+              of living, the expectation of a<span class="highlighter">
+                fair go</span
+              >
+              for all, and a belief that the next generation would enjoy<span
+                class="highlighter highlighter--up"
+              >
+                greater opportunity</span
+              >
+              than the last.
+            </p>
+            <p>
+              The promise to Australians has been
+              <span class="highlighter highlighter--down">broken</span>.
+            </p>
+            <p>
+              AMPLIFY brings Australians together to confront <br /><span
+                class="highlighter highlighter--down"
+              >
+                hard truths</span
+              >, shape bold
+              <span class="highlighter highlighter--up">solutions</span>, and
+              advocate for
+              <span class="highlighter highlighter--up">change </span>to rebuild
+              the promise —
+              <span class="highlighter highlighter--up"
+                >while we still can.</span
+              >
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- page 3 -->
+      <section class="card-trio">
+        <div class="card-trio__heading">
+          <h2>Take action with AMPLIFY</h2>
+        </div>
+        <div class="card-trio__inner">
+          <div class="card card--blue">
+            <div class="arrow">
               <svg
-                width="40px"
-                height="54px"
+                width="90px"
+                height="90px"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                stroke="#ffe3ff"
+                transform="rotate(45)"
+              >
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="arrow-text">Sign up</p>
+            <div class="card-text">
+              <p>Join us</p>
+            </div>
+          </div>
+          <div class="card card--green">
+            <div class="arrow">
+              <svg
+                width="81px"
+                height="81px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                transform="rotate(45)"
+              >
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="arrow-text">Donate</p>
+            <div class="card-text">
+              <p>Support us</p>
+            </div>
+          </div>
+          <div class="card card--pink">
+            <div class="arrow">
+              <svg
+                width="81px"
+                height="81px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                transform="rotate(45)"
+              >
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <p class="arrow-text">Connect</p>
+            <div class="card-text">
+              <p>Contact us</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- page 4 3D -->
+      <section class="people-section">
+        <div class="people-section--heading">
+          <h2>Meet a few of our community members</h2>
+        </div>
+        <div class="people__container">
+          <div class="people__card people__card--1">
+            <div class="people__card--inner">
+              <div class="people__card--front">
+                <img
+                  src="./media/img/tonia_krebs.png"
+                  alt="photo"
+                  class="people__card--image"
+                />
+              </div>
+              <div class="people__card--back">
+                <h3>Tonia Krebs</h3>
+                <p>
+                  "As a property professional and financial wellbeing advocate,
+                  I want to see practical, data-driven strategies that improve
+                  affordability, increase occupancy, and deliver sustainable
+                  homes through collaboration between community, government and
+                  industry."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="people__card people__card--2">
+            <div class="people__card--inner">
+              <div class="people__card--front">
+                <img
+                  src="./media/img/jim_hardy.png"
+                  alt="photo"
+                  class="people__card--image"
+                />
+              </div>
+              <div class="people__card--back">
+                <h3>Jim Hardy</h3>
+                <p>
+                  "I am a retired community banker who firsthand has seen how
+                  private-sector inspired action makes a REAL difference.
+                  Government alone can't solve the myriads of structural
+                  solutions required for this fundamental economic issue."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="people__card people__card--3">
+            <div class="people__card--inner">
+              <div class="people__card--front">
+                <img
+                  src="./media/img/affine_lai.png"
+                  alt="photo"
+                  class="people__card--image"
+                />
+              </div>
+              <div class="people__card--back">
+                <h3>Affine Lai</h3>
+                <p>
+                  "I joined AMPLIFY to highlight the urgency and impact of the
+                  housing crisis on the Australian community and challenge
+                  misconceptions of homelessness. I believe a more compassionate
+                  &amp; collaborative approach at innovating systemic reform is
+                  key in creating a fairer, more accessible housing sector for
+                  all."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="people__card people__card--4">
+            <div class="people__card--inner">
+              <div class="people__card--front">
+                <img
+                  src="./media/img/bradley_walker.png"
+                  alt="photo"
+                  class="people__card--image"
+                />
+              </div>
+              <div class="people__card--back">
+                <h3>Bradley Walker</h3>
+                <p>
+                  "I'm a Bundjalung man from the Northern Rivers, community
+                  leader and advocate for the homeless. I joined AMPLIFY to hold
+                  the government accountable, and make sure people don't
+                  experience discrimination in housing like I've experienced."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="people__card people__card--5">
+            <div class="people__card--inner">
+              <div class="people__card--front">
+                <img
+                  src="./media/img/mukund_rajesh.png"
+                  alt="photo"
+                  class="people__card--image"
+                />
+              </div>
+              <div class="people__card--back">
+                <h3>Mukund Rajesh</h3>
+                <p>
+                  "I'm a law professional, PhD candidate and aspiring social
+                  worker, passionate about bridging the gap between policy
+                  design and real world impact. Being part of AMPLIFY gives me
+                  the chance to help solve issues through practical,
+                  community-oriented solutions and to ensure that every voice is
+                  heard in shaping housing reform."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="people__card people__card--6">
+            <div class="people__card--inner">
+              <div class="people__card--front">
+                <img
+                  src="./media/img/ann_uldridge.png"
+                  alt="photo"
+                  class="people__card--image"
+                />
+              </div>
+              <div class="people__card--back">
+                <h3>Ann Uldridge</h3>
+                <p>
+                  "I'm an ICT professional with 30 years' experience across
+                  industries. I co-founded Women in Technology (QLD). I joined
+                  AMPLIFY because advancing affordable, secure housing for rural
+                  and regional women is important to me."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="people__card people__card--7">
+            <div class="people__card--inner">
+              <div class="people__card--front">
+                <img
+                  src="./media/img/callan_hutchinson.png"
+                  alt="photo"
+                  class="people__card--image"
+                />
+              </div>
+              <div class="people__card--back">
+                <h3>Callan Hutchinson</h3>
+                <p>
+                  "I'm a husband & father, and I'm involved in a small family
+                  business. I'm also a renter growing frustrated by the lack of
+                  action on housing affordability, and tax reform where experts
+                  are seemingly ignored. I joined AMPLIFY because I felt
+                  existing structures mute the voices of ordinary people."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="people__card people__card--8">
+            <div class="people__card--inner">
+              <div class="people__card--front">
+                <img
+                  src="./media/img/mace_james.png"
+                  alt="photo"
+                  class="people__card--image"
+                />
+              </div>
+              <div class="people__card--back">
+                <h3>Mace James</h3>
+                <p>
+                  "I know first hand how long-term barriers to renting and home
+                  ownership can have a huge impact on one's life - AMPLIFY has
+                  helped give me a platform to advocate for change for those in
+                  situations similar to my own."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- page 5 -->
+      <section class="how-we-work">
+        <div class="text-wrapper">
+          <h2>How we work</h2>
+          <div class="content">
+            <p class="content__text">
+              The promise to Australians has been broken. AMPLIFY's work
+              elevates the community's voice, building political courage to act
+              and rebuild that promise - while we still can.
+            </p>
+            <a href="#">
+              <p class="explore-btn">Explore</p>
+              <svg
+                width="74px"
+                height="74px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                transform="rotate(-45)matrix(1, 0, 0, -1, 0, 0)"
               >
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g
@@ -60,373 +502,98 @@
                 ></g>
                 <g id="SVGRepo_iconCarrier">
                   <path
-                    d="M20 7L4 7"
-                    stroke="#ffe3ff"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  ></path>
-                  <path
-                    d="M20 12L4 12"
-                    stroke="#ffe3ff"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  ></path>
-                  <path
-                    d="M20 17L4 17"
-                    stroke="#ffe3ff"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  ></path>
-                </g>
-              </svg>
-            </a> 
-            
-          </div>
-        </div>
-        <div class="hero--right">
-          <div class="card card--blue">
-            <div class="arrow">
-              <svg
-                width="81px"
-                height="81px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                transform="rotate(45)"
-              >
-                <g id="SVGRepo_iconCarrier">
-                  <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
-                    fill="currentColor" 
+                    fill="#831672"
                   ></path>
-                </g>
-              </svg>
-            </div>
-            <div class="card-text">
-              <p>AMPLIFY</p>
-              <p>Home</p>
-              <p>Truths</p>
-            </div>
-          </div>
-          <div class="card card--pink">
-            <div class="arrow">
-              <svg
-                width="81px"
-                height="81px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                transform="rotate(45)"
-              >
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
-                    fill="currentColor"
-                  ></path>
-                </g>
-              </svg>
-            </div>
-            <div class="card-text">
-              <p>AMPLIFY's</p>
-              <p>Work</p>
-            </div>
-          </div>
-          <div class="card card--green">
-            <div class="arrow">
-              <svg
-                width="81px"
-                height="81px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                transform="rotate(45)"
-              >
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
-                    fill="currentColor"
-                  ></path>
-                </g>
-              </svg>
-            </div>
-            <div class="card-text">
-              <p>AMPLIFY</p>
-              <p>Newsroom</p>
-            </div>
-          </div>
-      </section>
-      <section class="text-section">
-        <div class="text-section__inner">
-          <h2>71% of Australians agree that the Australian promise has been broken.</h2>
-          <p>For decades Australians have enjoyed a <span class="highlighter highlighter--up">rising</span> standard of living, the expectation of a<span class="highlighter"> fair go</span> for all, and a belief that the next generation would enjoy<span class="highlighter highlighter--up"> greater opportunity</span> than the last.</p>
-          <p>The promise to Australians has been <span class="highlighter highlighter--down">broken</span>.</p>
-          <p>AMPLIFY brings Australians together to confront <br><span class="highlighter highlighter--down"> hard truths</span>, shape bold <span class="highlighter highlighter--up">solutions</span>, and advocate for <span class="highlighter highlighter--up">change </span>to rebuild the promise — <span class="highlighter highlighter--up">while we still can.</span></p>
-        </div>
-      </section>
-      </div>
-      <section class="card-trio">
-        <div class="card-trio__heading">
-          <h2>Take action with AMPLIFY</h2>
-        </div>
-        <div class="card-trio__inner">
-          <div class="card card--blue">
-              <div class="arrow">
-                <svg
-                  width="90px"
-                  height="90px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  transform="rotate(45)"
-                >
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
-                      fill="currentColor"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-              <p class="arrow-text">Sign up</p>
-              <div class="card-text">
-                <p>Join us</p>
-              </div>
-          </div>
-          <div class="card card--green">
-              <div class="arrow">
-                <svg
-                  width="81px"
-                  height="81px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  transform="rotate(45)"
-                >
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
-                      fill="currentColor"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-              <p class="arrow-text">Donate</p>
-              <div class="card-text">
-                <p>Support us</p>
-              </div>
-          </div>
-          <div class="card card--pink">
-              <div class="arrow">
-                <svg
-                  width="81px"
-                  height="81px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  transform="rotate(45)"
-                >
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
-                      fill="currentColor"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-              <p class="arrow-text">Connect</p>
-              <div class="card-text">
-                <p>Contact us</p>
-              </div>
-          </div>
-        </div>
-      </section>
-      <section class="people-section">
-        <div class="people-section--heading">
-          <h2>Meet a few of our community members</h2>        
-        </div>
-        <div class="people__container">
-          <div class="people__card people__card--1">
-            <div class="people__card--inner">
-              <div class="people__card--front">
-                <img src="./media/img/tonia_krebs.png" alt="photo" class="people__card--image">
-              </div>
-              <div class="people__card--back">
-                <h3>Tonia Krebs</h3>
-                <p>"As a property professional and financial wellbeing advocate, I want to see practical, data-driven strategies that improve affordability, increase occupancy, and deliver sustainable homes through collaboration between community, government and industry."</p>
-              </div>
-            </div>
-          </div>
-          <div class="people__card people__card--2">
-            <div class="people__card--inner">
-                        <div class="people__card--front">
-                            <img src="./media/img/jim_hardy.png" alt="photo" class="people__card--image">
-                        </div>
-                        <div class="people__card--back">
-                            <h3>Jim Hardy</h3>
-                            <p>"I am a retired community banker who firsthand has seen how private-sector inspired action makes a REAL difference. Government alone can't solve the myriads of structural solutions required for this fundamental economic issue."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="people__card people__card--3">
-                    <div class="people__card--inner">
-                        <div class="people__card--front">
-                            <img src="./media/img/affine_lai.png" alt="photo" class="people__card--image">
-                        </div>
-                        <div class="people__card--back">
-                            <h3>Affine Lai</h3>
-                            <p>"I joined AMPLIFY to highlight the urgency and impact of the housing crisis on the Australian community and challenge misconceptions of homelessness. I believe a more compassionate &amp; collaborative approach at innovating systemic reform is key in creating a fairer, more accessible housing sector for all."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="people__card people__card--4">
-                    <div class="people__card--inner">
-                        <div class="people__card--front">
-                             <img src="./media/img/bradley_walker.png" alt="photo" class="people__card--image">
-                        </div>
-                        <div class="people__card--back">
-                            <h3>Bradley Walker</h3>
-                            <p>"I'm a Bundjalung man from the Northern Rivers, community leader and advocate for the homeless. I joined AMPLIFY to hold the government accountable, and make sure people don't experience discrimination in housing like I've experienced."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="people__card people__card--5">
-                    <div class="people__card--inner">
-                        <div class="people__card--front">
-                            <img src="./media/img/mukund_rajesh.png" alt="photo" class="people__card--image">
-                        </div>
-                        <div class="people__card--back">
-                            <h3>Mukund Rajesh</h3>
-                            <p>"I'm a law professional, PhD candidate and aspiring social worker, passionate about bridging the gap between policy design and real world impact. Being part of AMPLIFY gives me the chance to help solve issues through practical, community-oriented solutions and to ensure that every voice is heard in shaping housing reform."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="people__card people__card--6">
-                    <div class="people__card--inner">
-                         <div class="people__card--front">
-                            <img src="./media/img/ann_uldridge.png" alt="photo" class="people__card--image">
-                        </div>
-                        <div class="people__card--back">
-                            <h3>Ann Uldridge</h3>
-                            <p>"I'm an ICT professional with 30 years' experience across industries. I co-founded Women in Technology (QLD). I joined AMPLIFY because advancing affordable, secure housing for rural and regional women is important to me."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="people__card people__card--7">
-                    <div class="people__card--inner">
-                        <div class="people__card--front">
-                            <img src="./media/img/callan_hutchinson.png" alt="photo" class="people__card--image">
-                        </div>
-                        <div class="people__card--back">
-                            <h3>Callan Hutchinson</h3>
-                            <p>"I'm a husband & father, and I'm involved in a small family business. I'm also a renter growing frustrated by the lack of action on housing affordability, and tax reform where experts are seemingly ignored. I joined AMPLIFY because I felt existing structures mute the voices of ordinary people."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="people__card people__card--8">
-                     <div class="people__card--inner">
-                        <div class="people__card--front">
-                             <img src="./media/img/mace_james.png" alt="photo" class="people__card--image">
-                        </div>
-                        <div class="people__card--back">
-                            <h3>Mace James</h3>
-                            <p>"I know first hand how long-term barriers to renting and home ownership can have a huge impact on one's life - AMPLIFY has helped give me a platform to advocate for change for those in situations similar to my own."</p>
-                        </div>
-                    </div>
-                </div>
-        </div>
-      </section>
- 
-      <!-- page 5 -->
-      <section class="how-we-work">
-        <div class="text-wrapper">
-          <h2>
-            How we work
-          </h2>
-          <div class="content">
-            <p class="content__text">The promise to Australians has been broken. AMPLIFY's work elevates the community's voice, building political courage to act and rebuild that promise - while we still can.</p>
-            <a href="#">
-              <p class="explore-btn">Explore</p>
-              <svg width="74px" height="74px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(-45)matrix(1, 0, 0, -1, 0, 0)">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier"> 
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z" fill="#831672"></path>
                 </g>
               </svg>
             </a>
           </div>
           <div class="rounded-boxes">
             <div class="rounded-box">
-              <h3>Seek
-                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path
-        fill="currentColor"
-        d="M11.576 5.79a5.438 5.438 0 1 1 0 10.876 5.438 5.438 0 0 1 0-10.876Z"
-      />
-      <path
-        fill="currentColor"
-        fill-rule="evenodd"
-        d="M12 0c6.627 0 12 5.373 12 12v12H12C5.373 24 0 18.627 0 12S5.373 0 12 0Zm-.424 4.106a7.122 7.122 0 0 0-7.122 7.122l.002.184a7.122 7.122 0 0 0 6.936 6.936l.184.002a7.09 7.09 0 0 0 4.405-1.526l4.817 4.817 1.191-1.19-4.817-4.818a7.088 7.088 0 0 0 1.524-4.221l.002-.184a7.122 7.122 0 0 0-6.938-7.12l-.184-.002Z"
-        clip-rule="evenodd"
-      />
+              <h3>
+                Seek
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M11.576 5.79a5.438 5.438 0 1 1 0 10.876 5.438 5.438 0 0 1 0-10.876Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M12 0c6.627 0 12 5.373 12 12v12H12C5.373 24 0 18.627 0 12S5.373 0 12 0Zm-.424 4.106a7.122 7.122 0 0 0-7.122 7.122l.002.184a7.122 7.122 0 0 0 6.936 6.936l.184.002a7.09 7.09 0 0 0 4.405-1.526l4.817 4.817 1.191-1.19-4.817-4.818a7.088 7.088 0 0 0 1.524-4.221l.002-.184a7.122 7.122 0 0 0-6.938-7.12l-.184-.002Z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
               </h3>
-              <p>We seek out the best evidence-based reforms from leading experts around the world to the issues that are most important to the Australian community.</p>
+              <p>
+                We seek out the best evidence-based reforms from leading experts
+                around the world to the issues that are most important to the
+                Australian community.
+              </p>
             </div>
             <div class="rounded-box">
-              <h3>Solve
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-      <path
-        fill="currentColor"
-        d="M12 7.138a4.065 4.065 0 0 1 2.791 7.02c-.476.45-.948 1.076-1.12 1.863H10.33c-.171-.787-.643-1.413-1.12-1.864A4.065 4.065 0 0 1 12 7.138Z"
-      />
-      <path
-        fill="currentColor"
-        fill-rule="evenodd"
-        d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0ZM9.728 19.76l.105.877h4.335l.105-.877H9.728Zm-.149-1.806.104.877h4.634l.105-.877H9.579ZM12 6.133a5.07 5.07 0 0 0-5.07 5.07l.002.135a5.055 5.055 0 0 0 1.587 3.55c.44.416.794.94.862 1.542l.066.596h5.107l.066-.596c.063-.565.378-1.06.78-1.463l.082-.08a5.055 5.055 0 0 0 1.586-3.549l.002-.135c0-2.8-2.27-5.07-5.07-5.07Zm-8.808 4.666v.842h2.434v-.842H3.192Zm15.185 0v.842h2.434v-.842h-2.434ZM3.666 8.317l2.257.91.315-.781-2.258-.91-.314.781Zm14.071.09.321.778 2.25-.926-.32-.78-2.25.928ZM5.477 5.294l1.72 1.721.595-.596-1.72-1.72-.596.595Zm10.732 1.122.596.596 1.72-1.722-.057-.058.004-.004-.475-.474-.004.004-.063-.063-1.72 1.72ZM8.1 3.306l.973 2.231.772-.336-.972-2.231-.772.336Zm6.044 1.892.773.332.962-2.235-.774-.333-.961 2.236Zm-2.565-2.786v2.433h.842V2.412h-.842Z"
-        clip-rule="evenodd"
-      />
-              </svg>
+              <h3>
+                Solve
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 7.138a4.065 4.065 0 0 1 2.791 7.02c-.476.45-.948 1.076-1.12 1.863H10.33c-.171-.787-.643-1.413-1.12-1.864A4.065 4.065 0 0 1 12 7.138Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0ZM9.728 19.76l.105.877h4.335l.105-.877H9.728Zm-.149-1.806.104.877h4.634l.105-.877H9.579ZM12 6.133a5.07 5.07 0 0 0-5.07 5.07l.002.135a5.055 5.055 0 0 0 1.587 3.55c.44.416.794.94.862 1.542l.066.596h5.107l.066-.596c.063-.565.378-1.06.78-1.463l.082-.08a5.055 5.055 0 0 0 1.586-3.549l.002-.135c0-2.8-2.27-5.07-5.07-5.07Zm-8.808 4.666v.842h2.434v-.842H3.192Zm15.185 0v.842h2.434v-.842h-2.434ZM3.666 8.317l2.257.91.315-.781-2.258-.91-.314.781Zm14.071.09.321.778 2.25-.926-.32-.78-2.25.928ZM5.477 5.294l1.72 1.721.595-.596-1.72-1.72-.596.595Zm10.732 1.122.596.596 1.72-1.722-.057-.058.004-.004-.475-.474-.004.004-.063-.063-1.72 1.72ZM8.1 3.306l.973 2.231.772-.336-.972-2.231-.772.336Zm6.044 1.892.773.332.962-2.235-.774-.333-.961 2.236Zm-2.565-2.786v2.433h.842V2.412h-.842Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
               </h3>
-              <p>We empower the community to find solutions, using cutting edge tools to debate, deliberate and build consensus.</p>
+              <p>
+                We empower the community to find solutions, using cutting edge
+                tools to debate, deliberate and build consensus.
+              </p>
             </div>
             <div class="rounded-box">
-              <h3>Spark 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-      <path
-        fill="currentColor"
-        d="m13.448 8.503 2.05 2.049v2.896l-2.05 2.05H10.55l-2.049-2.05V10.55l2.048-2.047h2.898Z"
-      />
-      <path
-        fill="currentColor"
-        fill-rule="evenodd"
-        d="M24 7.03v9.94L16.97 24H7.03L0 16.97V7.03L7.03 0h9.94L24 7.03ZM10.54 3.242v5.231l-3.7-3.7-2.063 2.063 3.702 3.703H3.242v2.916h5.236L4.775 17.16l2.062 2.062 3.703-3.702v5.237h2.916v-5.24l3.706 3.705 2.063-2.063-3.703-3.703h5.235V10.54H15.52l3.702-3.702-2.063-2.063-3.703 3.703V3.243H10.54Z"
-        clip-rule="evenodd"
-      />
-          </svg>
+              <h3>
+                Spark
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m13.448 8.503 2.05 2.049v2.896l-2.05 2.05H10.55l-2.049-2.05V10.55l2.048-2.047h2.898Z"
+                  />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M24 7.03v9.94L16.97 24H7.03L0 16.97V7.03L7.03 0h9.94L24 7.03ZM10.54 3.242v5.231l-3.7-3.7-2.063 2.063 3.702 3.703H3.242v2.916h5.236L4.775 17.16l2.062 2.062 3.703-3.702v5.237h2.916v-5.24l3.706 3.705 2.063-2.063-3.703-3.703h5.235V10.54H15.52l3.702-3.702-2.063-2.063-3.703 3.703V3.243H10.54Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
               </h3>
-              <p>We spark the change the community wants to see by advocating to those with the power to make change happen.  </p>
+              <p>
+                We spark the change the community wants to see by advocating to
+                those with the power to make change happen.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      
+
       <!-- page 6 -->
       <section class="pic-section">
-        <img src="./media/img/tooltip.png" alt="background">
-        <figcaption>Australia's first National AMPLIFICATION on Housing, February 2025</figcaption>
+        <img src="./media/img/tooltip.png" alt="background" />
+        <figcaption>
+          Australia's first National AMPLIFICATION on Housing, February 2025
+        </figcaption>
       </section>
 
       <!-- page 7 -->
@@ -434,32 +601,42 @@
         <h2>Our work</h2>
         <div class="feature-card">
           <div class="feature-card__image">
-            <img class="feature-card__image--img" src="./media/img/insight-card.webp" alt="photo">
+            <img
+              class="feature-card__image--img"
+              src="./media/img/insight-card.webp"
+              alt="photo"
+            />
           </div>
           <div class="feature-card__content">
             <h3>Our insights</h3>
-            <p>We can only rebuild the promise to Australians when we listen to Australians. We're listening, learning, and amplifying the collective voice of Australians, ensuring that solutions reflect what the country really wants and needs. AMPLIFY INSIGHTS are the results of our continuous community polling.</p>
+            <p>
+              We can only rebuild the promise to Australians when we listen to
+              Australians. We're listening, learning, and amplifying the
+              collective voice of Australians, ensuring that solutions reflect
+              what the country really wants and needs. AMPLIFY INSIGHTS are the
+              results of our continuous community polling.
+            </p>
           </div>
           <div class="arrow">
             <p>Learn More</p>
             <div class="down-arrow">
-                <svg
-                  width="81px"
-                  height="81px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  transform="rotate(135)"
-                >
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
-                      fill="currentColor"
-                    ></path>
-                  </g>
-                </svg>
+              <svg
+                width="81px"
+                height="81px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                transform="rotate(135)"
+              >
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 3C12 3 12 3 12 3L19 10C20 10 20 11 19 11C19 12 18 12 18 11L13 6V20C13 20 12 21 12 21C11 21 11 20 11 20V6L5 11C5 12 4 12 4 11C3 11 3 10 4 10L11 3C11 3 11 3 12 3Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
@@ -477,7 +654,10 @@
               </div>
               <div class="content">
                 <div class="heading">THE AUSTRALIAN</div>
-                <p>Venture capitalist teams up with CBA for next big project - democracy</p>
+                <p>
+                  Venture capitalist teams up with CBA for next big project -
+                  democracy
+                </p>
               </div>
             </div>
             <div class="news-card news-card--blue">
@@ -487,7 +667,10 @@
               </div>
               <div class="content">
                 <div class="heading">THE AUSTRALIAN</div>
-                <p>Venture capitalist teams up with CBA for next big project - democracy</p>
+                <p>
+                  Venture capitalist teams up with CBA for next big project -
+                  democracy
+                </p>
               </div>
             </div>
             <div class="news-card news-card--green">
@@ -497,7 +680,10 @@
               </div>
               <div class="content">
                 <div class="heading">THE AUSTRALIAN</div>
-                <p>Venture capitalist teams up with CBA for next big project - democracy</p>
+                <p>
+                  Venture capitalist teams up with CBA for next big project -
+                  democracy
+                </p>
               </div>
             </div>
           </div>
@@ -509,7 +695,10 @@
               </div>
               <div class="content">
                 <p>THE AUSTRALIAN</p>
-                <p>Venture capitalist teams up with CBA for next big project - democracy</p>
+                <p>
+                  Venture capitalist teams up with CBA for next big project -
+                  democracy
+                </p>
               </div>
             </div>
             <div class="news-card news-card--blue">
@@ -519,7 +708,10 @@
               </div>
               <div class="content">
                 <div class="heading">THE AUSTRALIAN</div>
-                <p>Venture capitalist teams up with CBA for next big project - democracy</p>
+                <p>
+                  Venture capitalist teams up with CBA for next big project -
+                  democracy
+                </p>
               </div>
             </div>
             <div class="news-card news-card--green">
@@ -529,11 +721,14 @@
               </div>
               <div class="content">
                 <div class="heading">THE AUSTRALIAN</div>
-                <p>Venture capitalist teams up with CBA for next big project - democracy</p>
+                <p>
+                  Venture capitalist teams up with CBA for next big project -
+                  democracy
+                </p>
               </div>
             </div>
-          </div>                  
-        </div> 
+          </div>
+        </div>
       </section>
 
       <!-- footer -->
@@ -554,7 +749,15 @@
             </div>
             <div class="right">
               <div class="social-links">
-                <p>We acknowledge the traditional owners and custodians of country throughout Australia and acknowledge their continuing connection to land, waters and community. We pay our respects to the people, the cultures and the elders past, present and emerging. AMPLIFY builds on more than ten thousand years of collective decision-making and governance by First Nations peoples.</p>
+                <p>
+                  We acknowledge the traditional owners and custodians of
+                  country throughout Australia and acknowledge their continuing
+                  connection to land, waters and community. We pay our respects
+                  to the people, the cultures and the elders past, present and
+                  emerging. AMPLIFY builds on more than ten thousand years of
+                  collective decision-making and governance by First Nations
+                  peoples.
+                </p>
               </div>
             </div>
           </div>
@@ -571,7 +774,8 @@
           <div class="footer-bottom__heading">AMPLIFY</div>
         </div>
         <div class="footer-yellow">
-          <p class="footer-yellow__text">Bolder Action on Housing</p></div>
+          <p class="footer-yellow__text">Bolder Action on Housing</p>
+        </div>
       </footer>
     </main>
   </body>
